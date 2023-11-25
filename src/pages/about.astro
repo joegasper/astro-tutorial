@@ -1,6 +1,5 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
-import "../styles/global.css";
 const pageTitle = "About Me";
 const identity = {
     firstName: "Joe",
@@ -17,7 +16,7 @@ const skills = [
     "Writing Docs",
 ];
 const happy = true;
-const finished = false;
+const finished = true;
 const goal = 3;
 const skillColor = "navy";
 const fontWeight = "bold";
@@ -27,7 +26,7 @@ const textCase = "uppercase";
 <BaseLayout pageTitle={pageTitle}>
     <style define:vars={{ skillColor, fontWeight, textCase }}>
         .skill {
-            color: var(--skillColor);
+            color: var(--color-text);
             font-weight: var(--fontWeight);
             text-transform: var(--textCase);
         }
@@ -55,7 +54,7 @@ const textCase = "uppercase";
             identity.hobbies.length >= 2 && (
                 <li>
                     Two of my hobbies are: {identity.hobbies[0]} and{" "}
-                    {identity.hobbies[1]}
+                    {identity.hobbies[1]}.
                 </li>
             )
         }
